@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>MRU y MRUV</title>
+</head>
+
+<body>
+    <header>
+        <h1> Movimiento Rectilíneo Uniforme y Movimiento Rectilíneo Uniformemente Variable</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#mru_tema1">MRU - Cálculo de Velocidad</a></li>
+            <li><a href="#mru_tema2">MRU - Cálculo de Distancia</a></li>
+            <li><a href="#mru_tema3">MRU - Cálculo del Tiempo</a></li>
+            <li><a href="#mruv_tema1">MRUV - Cálculo de Aceleración</a></li>
+            <li><a href="#mruv_tema2">MRUV - Cálculo de Velocidad Final</a></li>
+            <li><a href="#mruv_tema3">MRUV - Cálculo de Velocidad Inicial</a></li>
+        </ul>
+    </nav>
+    <main>
+     <!-- MRU Conceptos y Carateristicas -->
+        <div id="Conceptomru">
+            <h2>Movimiento Rectilíneo Uniforme</h2>
+            <form>
+                <p id="mrup">
+                    Es un concepto fundamental en la física que describe un tipo específico de movimiento de un objeto. En un MRU, un objeto
+                    se mueve a lo largo de una línea recta (es decir, en una sola dimensión) y a una velocidad constante. Esto significa que
+                    la magnitud de la velocidad del objeto no cambia con el tiempo, y su dirección también permanece constante.
+                </p>
+                <img id="imagemru" src="./Image/MRUimage.png" alt="">
+                <img id="imagemru1" src="./Image/MRUimage2.webp" alt="">
+                <h3>Algunas características:</h3>
+                <h4>Velocidad constante:</h4>
+                <p>
+                    El objeto se desplaza a la misma velocidad durante todo su movimiento. Esto significa que la distancia recorrida por el
+                    objeto en intervalos de tiempo iguales es la misma.
+                </p>
+                <h4>Trayectoria rectilínea:</h4>
+                <p>El objeto se mueve en línea recta, sin cambiar de dirección.</p>
+                <h4>Aceleración nula:</h4>
+                <p>En un MRU, la aceleración es igual a cero. Esto implica que no hay cambios en la velocidad del objeto con el tiempo, ni
+                en su magnitud ni en su dirección.</p>
+
+            </form>
+        </div>
+        <!-- Tema 1: MRU - Cálculo de Velocidad -->
+        <div id="mru_tema1">
+            <h2>Velocidad</h2>
+            <p>Para determinar la velocidad a la que se mueve un objeto 
+                si se conoce la distancia que ha recorrido y el tiempo que ha 
+                transcurrido desde que comenzó el movimiento se utiliza la siguente formula.
+                <h4>Formula para encontrar la velocidad:</h4>
+                <h4>v = d / t</h4>
+                <h4>Donde:</h4>
+                <p>v:Es la velocidad en metros por segundo (m/s).</p>
+                <p>d:Es la distancia recorrida en metros (m)</p>
+                <p>t:Es el tiempo transcurrido en segundos (s).</p>
+            </p>
+            <h2>MRU - Cálculo de Velocidad</h2>
+            <form>
+                <label for="distancia_mru1">Distancia (metros):</label>
+                <input type="number" id="distancia_mru1" step="0.01" required><br>
+
+                <label for="tiempo_mru1">Tiempo (segundos):</label>
+                <input type="number" id="tiempo_mru1" step="0.01" required><br>
+
+                <input type="button" value="Calcular Velocidad" class="botoncalcular" onclick="calcularVelocidad('mru1')">
+            </form>
+            <p>Resultado:</p>
+            <div id="resultado_mru1"></div>
+        </div>
+
+        <!-- Tema 2: MRU - Cálculo de Distancia -->
+        <div id="mru_tema2">
+            <h2>Distancia</h2>
+            <p>Esta fórmula permite determinar la distancia que un objeto ha recorrido 
+                cuando se conoce la velocidad a la que se mueve y el tiempo que ha 
+                transcurrido desde que comenzó el movimiento.
+                <h4>Formula para encontrar la distancia:</h4>
+                <h4>d = v * t</h4>
+                <h4>Donde:</h4>
+                <p>d:Es la distancia recorrida.</p>
+                <p>v:Es la velocidad constante del objeto.</p>
+                <p>t:Es el tiempo transcurrido.</p>
+            </p>
+            <h2>MRU - Cálculo de Distancia</h2>
+            <form>
+                <label for="velocidad_mru2">Velocidad (m/s):</label>
+                <input type="number" id="velocidad_mru2" step="0.01" required><br>
+
+                <label for="tiempo_mru2">Tiempo (segundos):</label>
+                <input type="number" id="tiempo_mru2" step="0.01" required><br>
+
+                <input type="button" value="Calcular Distancia" class="botoncalcular"onclick="calcularDistancia('mru2')">
+            </form>
+
+            <p>Resultado:</p>
+            <div id="resultado_mru2"></div>
+        </div>
+
+        <!-- Tema 3: MRU - Cálculo del Tiempo -->
+        <div id="mru_tema3">
+            <h2>Tiempo</h2>
+            <p>Para determinar el tiempo que tomará recorrer una distancia determinada a una velocidad constante se utiliza 
+                la siguente formula.
+                <h4>Formula para encontrar la distancia:</h4>
+                <h4>d = v * t</h4>
+                <h4>Donde:</h4>
+                <p>d:Es la distancia recorrida.</p>
+                <p>v:Es la velocidad constante del objeto.</p>
+                <p>t:Es el tiempo transcurrido.</p>
+            </p>
+            <h2>MRU - Cálculo del Tiempo</h2>
+            <form>
+                <label for="distancia_mru3">Distancia (metros):</label>
+                <input type="number" id="distancia_mru3" step="0.01" required><br>
+
+                <label for="velocidad_mru3">Velocidad (m/s):</label>
+                <input type="number" id="velocidad_mru3" step="0.01" required><br>
+
+                <input type="button" value="Calcular Tiempo" class="botoncalcular"  onclick="calcularTiempo('mru3')">
+            </form>
+
+            <p>Resultado:</p>
+            <div id="resultado_mru3"></div>
+        </div>
+
+        <!-- MRU Conceptos y Carateristicas -->
+        <div id="Conceptomru">
+            <h2>Movimiento Rectilíneo Uniformemente Variable</h2>
+            <form>
+                <p id="mrup">
+                    Describe el movimiento de un objeto que se desplaza en línea recta (una sola dimensión) y experimenta una aceleración
+                    constante. A diferencia del MRU (Movimiento Rectilíneo Uniforme), donde la velocidad es constante, en el MRUV la
+                    velocidad del objeto cambia uniformemente con el tiempo debido a la aceleración constante.
+                </p>
+                <img id="imgmruv" src="./Image/MRUimage3.jpg" alt="">
+                <img id="imgmru2" src="./Image/MRUV-imagen2.jpg" alt="">
+                <h3>Algunas características:</h3>
+                <h4>Aceleración constante:</h4>
+                <p>La aceleración en un MRUV es constante en magnitud y dirección. Esto significa que la velocidad del objeto cambia en la
+                    misma cantidad en cada unidad de tiempo.
+                </p>    
+                <h4>Variación de la velocidad:</h4>
+                <p>La velocidad del objeto no es constante; aumenta o disminuye uniformemente con el tiempo debido a la aceleración
+                constante. Puede ser una aceleración positiva (aumento de velocidad) o negativa (disminución de velocidad).</p> 
+                <h4>Cambios en la posición:</h4>
+                <p>Debido a la variación de la velocidad, la posición del objeto cambia con el tiempo en una manera más compleja que en un
+                MRU. Puede experimentar cambios en su velocidad y dirección.</p>
+            </form>
+        </div>
+
+        <!-- Tema 1: MRUV - Cálculo de Aceleración -->
+        <div id="mruv_tema1">
+            <h2>Aceleracion</h2>
+            <p>La aceleración en un MRUV es constante y se puede calcular utilizando la siguiente fórmula:
+                <h4>Fórmula de aceleración:</h4>
+                <h4>a = vf-vi/t </h4>
+                <h4>Donde:</h4>
+                <p>a:es la aceleración en metros por segundo cuadrado (m/s²).</p>
+                <p>vf:es la velocidad final en metros por segundo (m/s).</p>
+                <p>vi:es la velocidad inicial en metros por segundo (m/s).</p>
+                <p>t:es el tiempo en segundos (s).</p>
+            </p>
+            <h2>MRUV - Cálculo de Aceleración</h2>
+            <form>
+                <label for="vi">Velocidad Inicial (m/s):</label>
+                <input type="number" id="vi" step="0.01" required><br>
+                <label for="vf">Velocidad Final (m/s):</label>
+                <input type="number" id="vf" step="0.01" required><br>
+                <label for="t">Tiempo (segundos):</label>
+                <input type="number" id="t" step="0.01" required><br>
+                <input type="button" value="Calcular Aceleración" class="botoncalcular" onclick="calcularAceleracion('mruv1')">
+            </form>
+
+            <p>Resultado:</p>
+            <div id="resultado_mruv1"></div>
+        </div>
+
+        <!-- Tema 2: MRUV - Cálculo de Velocidad Final -->
+        <div id="mruv_tema2">
+            <h2>Velocidad Final</h2>
+            <p>Para calcular la velocidad final en un Movimiento Rectilíneo Uniformemente Variado se utiliza la siguiente
+                fórmula:
+                <h4>Fórmula para dterminar la Velocidad Final:</h4>
+                <h4>vf = vi+(a*t) </h4>
+                <h4>Donde:</h4>
+                <p>vf:es la velocidad final en metros por segundo (m/s).</p>
+                <p>a:es la velocidad inicial en metros por segundo (m/s).</p>
+                <p>vi:es la aceleración en metros por segundo cuadrado (m/s²).</p>
+                <p>t:es el tiempo en segundos (s).</p>
+            </p>
+            <h2>MRUV - Cálculo de Velocidad Final</h2>
+            <form>
+                <label for="velocidad_inicial_mruv2">Velocidad Inicial (m/s):</label>
+                <input type="number" id="velocidad_inicial_mruv2" step="0.01" required><br>
+
+                <label for="aceleracion_mruv2">Aceleración (m/s²):</label>
+                <input type="number" id="aceleracion_mruv2" step="0.01" required><br>
+
+                <label for="tiempo_mruv2">Tiempo (segundos):</label>
+                <input type="number" id="tiempo_mruv2" step="0.01" required><br>
+
+                <input type="button" value="Calcular Velocidad Final" class="botoncalcular" onclick="calcularVelocidadFinal('mruv2')">
+            </form>
+
+            <p>Resultado:</p>
+            <div id="resultado_mruv2"></div>
+        </div>
+        <!-- Tema 3: MRUV - Cálculo de Velocidad Inicial -->
+            <div id="mruv_tema3">
+                <h2>Velocidad Inicial</h2>
+                <p>Para calcular la velocidad inicial  en un Movimiento Rectilíneo Uniformemente Variado (MRUV) se usa la siguiente fórmula:
+                    <h4>Fórmula de Velocidad Inicial:</h4>
+                    <h4>vi = vf-(a*t) </h4>
+                    <h4>Donde:</h4>
+                    <p>vi:es la velocidad inicial en metros por segundo (m/s).</p>
+                    <p>vf:es la velocidad final en metros por segundo (m/s).</p>
+                    <p>a:es la aceleración en metros por segundo cuadrado (m/s²).</p>
+                <p>t:es el tiempo en segundos (s).</p>
+                </p>
+                <h2>MRUV - Cálculo de Velocidad Inicial</h2>
+                <form>
+                    <label for="velocidad_final_mruv3">Velocidad Final (m/s):</label>
+                    <input type="number" id="vf_mruv3" step="0.01" required><br>
+                
+                    <label for="aceleracion_mruv3">Aceleración (m/s²):</label>
+                    <input type="number" id="a_mruv3" step="0.01" required><br>
+                
+                    <label for="tiempo_mruv3">Tiempo (segundos):</label>
+                    <input type="number" id="t_mruv3" step="0.01" required><br>
+                
+                    <input type="button" value="Calcular Velocidad Inicial" class="botoncalcular"
+                        onclick="calcularVelocidadInicial('mruv3')">
+                </form>
+                
+                <p>Resultado:</p>
+                <div id="resultado_mruv3"></div>
+
+
+            </div>
+
+    </main>
+    <footer>
+        <div class="contenerdorfooter">
+            <img class="umg" src="./Image/UMG.png" alt="">
+        </div>
+        <p class="p1">fcojs@mium.edu.gt</p>
+        <p class="p1">Universidad Mariano Galvez</p>
+    </footer>
+
+    <script src="./JS/calculos.js"></script>
+</body>
+
+</html>
